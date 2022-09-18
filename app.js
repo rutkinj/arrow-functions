@@ -112,7 +112,7 @@ let sum = (a, b, c, d) => a + b + c + d;
 
 
 // TODO: Uncomment the following line of code to see the output in the browser console
-// console.log(sum(1, 2, 3, 4));
+console.log(sum(1, 2, 3, 4));
 
 
 let objectLit = () =>
@@ -124,7 +124,7 @@ let objectLit = () =>
 
 
 // TODO: Uncomment the following line of code to see the output in the browser console
-// console.log(objectLit());
+console.log(objectLit());
 
 
 let sumAndProduct = (a, b) => {
@@ -134,7 +134,7 @@ let sumAndProduct = (a, b) => {
 };
 
 // TODO: Uncomment the following line of code to see the output in the browser console
-// console.log(sumAndProduct(3, 9));
+console.log(sumAndProduct(3, 9));
 
 
 let message = (name) => `Hello, ${name}!`;
@@ -142,43 +142,43 @@ let message = (name) => `Hello, ${name}!`;
 // ${variable} is called template
 
 // TODO: Uncomment the following line of code to see the output in the browser console
-// console.log(message('Allie'));
+console.log(message('Allie'));
 
 
-let Student = function(name, age, hometown) {
-  this.name = name;
-  this.age = age;
-  this.hometown = hometown;
-};
+let Student = (name, age, hometown) => ({
+  name : name,
+  age : age,
+  hometown : hometown,
+});
 
-let joe = new Student('Joe Schmoe', 100, 'Anytown, USA');
+let joe = Student('Joe Schmoe', 100, 'Anytown, USA');
 
 // TODO: Uncomment the following line of code to see the output in the browser console
 // Note that the arrow function will cause this code to break!
-// console.log(joe);
+console.log(joe);
 
 // TODO: After viewing the previous console.log(), return the code to a working state.
 
 
 
-Student.prototype.greeting = function() {
-  return `Hi, my name is ${this.name}`;
+let greeting = (student) => {
+  return `Hi, my name is ${student.name}`;
 };
 
 // TODO: Uncomment the following line of code to see the output in the browser console
 // Note that the arrow function will cause this method to break!
-// console.log(joe.greeting());
+console.log(greeting(joe));
 
 // TODO: After viewing the previous console.log(), return the code to a working state.
 
 
 
-Student.courseName = function() {
+let courseName = () => {
   return 'This student is enrolled in Code 301.';
 };
 
 // TODO: Uncomment the following line of code to see the output in the browser console
-// console.log(Student.courseName());
+console.log(courseName());
 
 
 
